@@ -7,6 +7,7 @@ export const App = () => {
       <NavigationItem title='Computação' Icon={ChartLineUp} to='' />
       <NavigationItem title='Computação' selected Icon={ChartLineUp} to='' />
       <NavigationItem title='Computação' Icon={ChartLineUp} to='' />
+      <img src='/assets/bookwise.svg' alt='' />
     </div>
   );
 };
