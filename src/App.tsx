@@ -1,13 +1,6 @@
-import { ChartLineUp } from '@phosphor-icons/react';
-import { NavigationItem } from './components/ui/navigationItem';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes';
 
 export const App = () => {
-  return (
-    <div className='bg-black space-y-2'>
-      <NavigationItem title='Computação' Icon={ChartLineUp} to='' />
-      <NavigationItem title='Computação' selected Icon={ChartLineUp} to='' />
-      <NavigationItem title='Computação' Icon={ChartLineUp} to='' />
-      <img src='/assets/bookwise.svg' alt='' />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
