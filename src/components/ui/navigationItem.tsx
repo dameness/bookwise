@@ -1,4 +1,5 @@
 import { Icon } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 
 interface NavigationItemProps {
   Icon: Icon;
@@ -14,8 +15,8 @@ export const NavigationItem = ({
   selected = false,
 }: NavigationItemProps) => {
   return (
-    // <Link to={to}>
-    <div
+    <Link
+      to={to}
       className={`${
         selected ? 'text-gray-100' : 'text-gray-400'
       } flex items-center gap-3 p-2 hover:text-gray-100`}
@@ -26,10 +27,9 @@ export const NavigationItem = ({
         } w-1 h-6 rounded-sm`}
       />
 
-      <Icon className='w-5 min-w-5 ml-1' />
+      <Icon className='w-[26px] h-[26px] min-w-[26px] min-h-[26px] ml-1' />
 
-      <h1 className={`${selected ? 'font-semibold' : ''} text-sm`}>{title}</h1>
-    </div>
-    // </Link>
+      <h1 className={`${selected ? 'font-semibold' : ''} text-lg`}>{title}</h1>
+    </Link>
   );
 };
